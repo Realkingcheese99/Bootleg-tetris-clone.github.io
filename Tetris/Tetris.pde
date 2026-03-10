@@ -21,19 +21,22 @@ void setup() {
   cH = scrH/5;
   cW = 2*scrW/5;
   //cR = 3;
-  boxSize = cW/10;
-  j = 1;
+  //boxSize = cW/10;
+  boxSize = scrH/16;
+  j = 8;
   interval = 50;
-  offset = 3*scrW/10;
+  offset = (scrW/2-5*boxSize);
  
 }
 
 
 void draw(){
-background(0);
-
+background(#C8C8C8);
 frm = frameCount;
-rect(3*scrW/10, 0, cW, scrH);
+
+
+//playfield
+rect(offset, scrH % 16, 10*boxSize, scrH);
 
 //score and next piece
 rect(3*scrW/10+cW+(((3*scrW/10)-(3*scrH/10))/2), cH, 3*cH/2, 3*cH/2);

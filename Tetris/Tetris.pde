@@ -51,7 +51,7 @@ for(int i =0; i<17; i++) {
 rect(3*scrW/10+cW+(((3*scrW/10)-(3*scrH/10))/2), cH, 3*cH/2, 3*cH/2);
 
 
-grid[0][0] = 1;
+grid[anchorX][anchorY] = 1;
 
 if(frm % interval == 0) {
 j++;
@@ -84,8 +84,8 @@ fill(255, 255, 255);
 
 */
 
-grid[8][7] =  1;
-grid[9][7] =  1;
+//grid[8][7] =  1;
+//grid[9][7] =  1;
 fill(255, 255, 255);
 
 }
@@ -93,9 +93,12 @@ fill(255, 255, 255);
 void keyPressed(){
   if(key==CODED){
   if(keyCode==LEFT) {
-    anchorX=anchorX-1;
+    grid[anchorX][anchorY] = 0;
+    anchorX--;
+    
   }
   else if(keyCode==RIGHT) {
+    grid[anchorX][anchorY] = 0;
     anchorX++;
   }
 }

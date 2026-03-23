@@ -15,7 +15,12 @@ float offset;
 float jy;
 float px;
 float py;
-int[] check;
+//int[] check;
+int cSpace;
+int xCount;
+int[] aX; //coords of the 4 tiles of a tetromino (- the anchor point) key: 0,1 = a1; 2,3 = a2; 4,5 = a3; anchorX,anchorY = a4
+int[] aY;
+int max;
 
 void setup() {
   fullScreen();
@@ -31,16 +36,21 @@ void setup() {
   offset = (scrW/2-5*boxSize);
   //playfield
   grid = new int[10][16];
-  check = new int[10];
+  //check = new int[10];
   //jy = scrH % 16;
+  aX = new int[3];
+  aY = new int[3];
+  max = 200;
 }
+
+
 
 
 void draw() {
   background(#C8C8C8);
   frm = frameCount;
-
-  //grid[anchorX][anchorY] = 0;
+//println(aX);
+  
 
   //playfield
   rect(offset, 0, 10*boxSize, scrH);
@@ -59,65 +69,72 @@ void draw() {
 
   //z piece
 
-
-
+aX[1] = anchorX+1;
+aY[1] = anchorY;
+for(int n = 0; n<3; n++){
+println("x",n,": ",aX[n]);
+println("y",n,": ",aY[n]);
+}
   //grid[anchorX][anchorY] = 1;
   //grid[anchorX][anchorY] = 0;
 
   if (frm % interval == 0 && (anchorY)!=15) {
     j++;
     if (anchorY>=1) {
-      //grid[anchorX][anchorY-1] = 0;
+       //grid[anchorX+1][anchorY] = 0;
     }
     jy=(j*boxSize)+ scrH % 16;
   }
   fill(255, 125, 150);
   
+  
+  for(int check = 1; check<3; check++) {
+    grid[aX[check]][aY[check]] = check+2;
+  }
+  
   //check 
-  for (int x = 0; x < 10; x++) {
-    for (int y = 0; y < 16; y++) {
-      if (grid[x][y] == 2 ) {
-        fill(150, 125, 255);
-      } else fill(255, 125, 150);
-      if (grid[x][y] != 0) {
+  for (int y = 0; y < 16; y++) {
+    xCount = 0;
+    for (int x = 0; x < 10; x++) {
+      
+      //block display
+
+        if (grid[x][y] != 0) {
+        fill(round(abs(sin(PI/(grid[x][y])))*max),round(abs(cos(PI/(grid[x][y]))*max)),round(abs(sin(PI/grid[x][y]))*max));
         rect(offset+(x*boxSize), (scrH % 16) + y*boxSize, boxSize, boxSize);
+        
+        //line clearing
+        if(cSpace == grid[x][y]) {
+          xCount++;
+        }
+        cSpace = grid[x][y];
       }
     }
+    if(xCount==10) {
+    for(int x2 = 0; x2<10; x2++) {
+      grid[x2][y] = 0;
+    }
   }
+  }
+
 
   if (anchorY == 15 || grid[anchorX][anchorY+1]==1) {
     j = 0;
+    grid[anchorX][anchorY] = 1;
+    grid[anchorX+1][anchorY] = 1;
   } else {
     grid[anchorX][anchorY] = 0;
-    //grid[anchorX-1][anchorY] = 0;
+    grid[anchorX+1][anchorY] = 0;
   }
 
   anchorY = j;
 
-  grid[anchorX][anchorY] = 1;
-  //grid[anchorX-1][anchorY] = 3;
+  grid[anchorX][anchorY] = 2;
   if (anchorY > 0) {
-    //grid[anchorX][anchorY-1] = 3;
-    //grid[anchorX+1][anchorY+1] = 3;
+
   }
-  /*
 
-   rect(3*scrW/10+anchorX*cW/10, j, boxSize, boxSize);
-   rect((3*scrW/10+anchorX*cW/10)+boxSize, j, boxSize, boxSize);
-   rect((3*scrW/10+anchorX*cW/10)+boxSize, (j-boxSize), boxSize, boxSize);
-   rect((3*scrW/10+anchorX*cW/10  )+2*boxSize, (j-boxSize), boxSize, boxSize);
-   
-   fill(255,125,150);
-   rect(offset+anchorX*boxSize, jy, boxSize, boxSize);
-   rect((offset+anchorX*boxSize)+boxSize, jy, boxSize, boxSize);
-   rect((offset+anchorX*boxSize)+boxSize, (jy-boxSize), boxSize, boxSize);
-   rect((offset+anchorX*boxSize  )+2*boxSize, (jy-boxSize), boxSize, boxSize);
-   fill(255, 255, 255);
-   
-   */
 
-  //grid[8][7] =  1;
-  //grid[9][7] =  1;
   fill(255, 255, 255);
 } //END OF DRAW
 
@@ -137,5 +154,23 @@ void keyPressed() {
   }
   if (key=='c') {
     grid = new int[10][16];
+    }
+  if (key=='e') {
+    for(int n = 0; n<3; n++) {
+      if(aX[n] != 0 && aY[n] != 0) {
+    rot(n, 1);
+      }
+    }
+    }
   }
-}
+  
+  void rot(int point, int dir) {
+    println("old: ",aX[point],", ",aY[point]);
+    int aX0 = aX[point]-anchorX;
+    int aY0 = aY[point]-anchorY;
+    int aX02 = -1*dir*aY0;
+    int aY02 = dir*aX0;
+    aX[point] = aX02+anchorX;
+    aY[point] = aY02+anchorY;
+    println("new: ",aX[point],", ",aY[point]);
+  }

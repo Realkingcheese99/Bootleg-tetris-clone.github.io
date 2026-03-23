@@ -38,7 +38,7 @@ void setup() {
   grid = new int[10][16];
   //check = new int[10];
   //jy = scrH % 16;
-  aX = new int[3];
+  aX = new int[4];
   aY = new int[3];
   max = 200;
 }
@@ -146,7 +146,16 @@ void keyPressed() {
         anchorX--;
       }
     } else if (keyCode==RIGHT) {
-      if (anchorX != 9 && grid[anchorX+1][anchorY]!=1) {
+      int i = 0;
+      for(int j = 0; i<3; j++){
+        if(aX[j]+1!=10) {
+
+      if (anchorX != 9 && grid[anchorX+1][anchorY]!=1 && aX[j] != 9 && grid[aX[j]+1][aY[j]] == 0) {
+      i++;
+      }
+        }
+      }
+      if(i==3) {
         grid[anchorX][anchorY] = 0;
         anchorX++;
       }

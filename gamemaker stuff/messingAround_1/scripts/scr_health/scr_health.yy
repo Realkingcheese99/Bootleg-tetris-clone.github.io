@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_health",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_health",
+  "parent":{
+    "name":"scr",
+    "path":"folders/scr.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

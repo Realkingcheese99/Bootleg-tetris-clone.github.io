@@ -1,0 +1,13 @@
+playerSpd = 5;
+prophecy_x = 0;
+prophecy_y = 0;
+global.player_score = 0;
+global.time = 0;
+xVel = 0;
+yVel = 0;
+playerFriction = 0.2;
+dashing = false;
+global.player_health = 3;
+scr_health();
+global.death = false;
+scr_sr();

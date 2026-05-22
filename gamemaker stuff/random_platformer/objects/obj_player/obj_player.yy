@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_health",
+  "%Name":"obj_player",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":5,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_health",
+  "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"game",
-    "path":"folders/obj/game.yy",
+    "name":"random_platformer",
+    "path":"random_platformer.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_health",
-    "path":"sprites/spr_health/spr_health.yy",
+    "name":"spr_player",
+    "path":"sprites/spr_player/spr_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,

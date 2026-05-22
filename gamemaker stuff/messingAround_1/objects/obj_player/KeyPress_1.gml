@@ -14,3 +14,10 @@ if(keyboard_check(vk_space) && dashing == false) {
 	dashing = true
 }
 }
+if(keyboard_check(ord("F"))) {
+	if(window_get_fullscreen()) {
+		window_set_fullscreen(false);
+	} else {
+		window_set_fullscreen(true);
+	}
+}

@@ -1,0 +1,10 @@
+spd = 5;
+xVel = 0;
+yVel = 0;
+player_friction = 1;
+dialogueRange = 20;
+global.dialogue = ["the quick brown fox jumps over the lazy dog", "line 2"];
+global.currentDialogue = "";
+z = 0;
+talkSpd = 2;
+alarm[0] = talkSpd;

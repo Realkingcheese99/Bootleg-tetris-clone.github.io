@@ -1,0 +1,10 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"fnt_common","order":5,"path":"fonts/fnt_common/fnt_common.yy",},
+    {"name":"obj_dialogueInteract","order":3,"path":"objects/obj_dialogueInteract/obj_dialogueInteract.yy",},
+    {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"spr_dialogueInteract","order":4,"path":"sprites/spr_dialogueInteract/spr_dialogueInteract.yy",},
+    {"name":"spr_player","order":2,"path":"sprites/spr_player/spr_player.yy",},
+  ],
+}

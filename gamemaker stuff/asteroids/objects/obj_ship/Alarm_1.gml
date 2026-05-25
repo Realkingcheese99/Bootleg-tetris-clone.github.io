@@ -1,0 +1,1 @@
+playerdeath = false;

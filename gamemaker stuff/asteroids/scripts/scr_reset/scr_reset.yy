@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_reset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_reset",
+  "parent":{
+    "name":"asteroids",
+    "path":"asteroids.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

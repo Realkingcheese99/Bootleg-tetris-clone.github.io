@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_block_spawn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_block_spawn",
+  "parent":{
+    "name":"Tetris",
+    "path":"Tetris.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

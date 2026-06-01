@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings":[
+    {"name":"battle","order":9,"path":"folders/battle.yy",},
+    {"name":"overworld","order":8,"path":"folders/overworld.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"fnt_common","order":5,"path":"fonts/fnt_common/fnt_common.yy",},
+    {"name":"obj_BattleUI","order":3,"path":"objects/obj_BattleUI/obj_BattleUI.yy",},
+    {"name":"obj_enemy","order":2,"path":"objects/obj_enemy/obj_enemy.yy",},
+    {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"Room1","order":2,"path":"rooms/Room1/Room1.yy",},
+    {"name":"spr_catalyst","order":1,"path":"sprites/spr_catalyst/spr_catalyst.yy",},
+    {"name":"spr_dialogueInteract","order":4,"path":"sprites/spr_dialogueInteract/spr_dialogueInteract.yy",},
+    {"name":"spr_enemy","order":10,"path":"sprites/spr_enemy/spr_enemy.yy",},
+    {"name":"spr_player","order":5,"path":"sprites/spr_player/spr_player.yy",},
+  ],
+}

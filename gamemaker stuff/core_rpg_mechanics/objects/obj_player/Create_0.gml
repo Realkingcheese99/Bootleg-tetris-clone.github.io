@@ -7,7 +7,7 @@ i =0;
 dir = 0;
 
 
-global.dialogue = [];
+/*global.dialogue = [];
 dialogueFileLocation = working_directory + "dialogue.txt";
 dialogueFile = file_text_open_read(dialogueFileLocation);
 if(file_exists("dialogue.txt")) {
@@ -30,7 +30,7 @@ while (!file_text_eof(dialogueFile)) {
 
 show_debug_message(string_concat("dialogue: ",global.dialogue));
 global.currentDialogue = "";
-
+*/
 z = 0;
 talkSpd = 2;
 //alarm[0] = talkSpd;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_at",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_at",
+  "parent":{
+    "name":"battle",
+    "path":"folders/battle.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

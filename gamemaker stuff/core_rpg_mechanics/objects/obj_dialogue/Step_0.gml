@@ -13,7 +13,7 @@ else if (currentChar < string_length(dialogPage))
 	var _typeSpd = typeSpd;
 	
 	currentChar += _typeSpd + (nameString!=""&&keyboard_check(ord("X"))) * 100;
-show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
+//show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 	//-------Pause at punctuations-------//
 	
 	var _punc = string_char_at(dialogPage, currentChar);
@@ -88,7 +88,7 @@ show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 				var _dig2 = string_char_at(dialogPage, currentChar+1);
 				var _portrait = _dig1 + _dig2;
 				portraitString = $"spr_portrait{_portrait}"
-				show_debug_message(portraitString);
+				//show_debug_message(portraitString);
 				currentChar++
 			}
 			
@@ -171,10 +171,11 @@ show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 		//clear $(value)
 	for (var i = 30; i >= 0 ; i--)
 	{
+		var j = "";
 		if(i<10) {
-			var j = $"0{i}"; 
+			j = $"0{i}"; 
 		} else {
-			var j = string(i);
+			j = string(i);
 		}
 		drawnText = string_replace_all(drawnText,"$" + j, "");
 	}
@@ -184,8 +185,8 @@ show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 
 
 
-else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
-	 {
+else if (keyboard_check_pressed(ord("Z")) or autoPage == true) {
+	if(room != battle or page < array_length(dialog)-1) {
 		 //Advanse dialogue
 		 portraitString = "0";
 		 page++;
@@ -202,4 +203,4 @@ else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
 			 currentChar = 0;
 		 }
 	 }
-
+	}

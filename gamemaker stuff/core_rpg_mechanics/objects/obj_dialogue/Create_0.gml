@@ -9,7 +9,7 @@ if(!variable_instance_exists(self,"length")){
 }
 dialog = [];
 array_copy(dialog,0,global.dialogue,start,length);
-show_debug_message(dialog);
+//show_debug_message(dialog);
 page = 0;
 drawnText = "";
 wrappedText = "";

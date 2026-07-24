@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script1",
+  "%Name":"init_enum",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script1",
+  "name":"init_enum",
   "parent":{
     "name":"core_rpg_mechanics",
     "path":"core_rpg_mechanics.yyp",

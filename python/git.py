@@ -83,6 +83,8 @@ if args > 1:
         else: subprocess.run(['echo', 'Exception thrown: Missing argument.'])
     elif arg == "add":
         add(sys.argv[2])
+    elif arg == "status":
+        subprocess.run(['git', 'status'], cwd = dir_repo)
             
 else:
     subprocess.run(['echo', 'Exception thrown: Missing argument.'])

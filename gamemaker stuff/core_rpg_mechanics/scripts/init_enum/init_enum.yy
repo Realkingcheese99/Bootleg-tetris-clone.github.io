@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"init_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_enum",
+  "parent":{
+    "name":"core_rpg_mechanics",
+    "path":"core_rpg_mechanics.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

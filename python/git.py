@@ -23,7 +23,8 @@ def pull():
 
 def commit():
     add("-a")
-    subprocess.run(['git', 'commit', "-m", "test"], cwd = dir_repo)
+    message = input("What would you like to label your commit? ")
+    subprocess.run(['git', 'commit', "-m", message], cwd = dir_repo)
 
 def push():
     commit()
@@ -57,7 +58,7 @@ def change(_arg):
 def add(file):
     if args > 2:
         if file == "-a":
-            subprocess.run(['git', 'add', '.'], cwd = dir_repo)
+            subprocess.run(['git', 'add', '--all'], cwd = dir_repo)
         
 
 if args > 1:

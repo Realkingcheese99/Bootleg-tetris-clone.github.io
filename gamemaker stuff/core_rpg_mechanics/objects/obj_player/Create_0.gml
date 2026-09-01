@@ -38,3 +38,5 @@ global.dialogueActive = false;
 global.dialogueLine = 0;
 global.dialogueActive2 = false;
 global.playerHealth = 20;
+global.dialoguePause = false;
+pauseChars = ["," , "." , "!"];

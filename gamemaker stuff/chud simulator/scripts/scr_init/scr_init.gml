@@ -1,0 +1,4 @@
+enum flowers {
+	sunflower,
+	tulip
+}

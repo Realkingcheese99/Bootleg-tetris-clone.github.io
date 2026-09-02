@@ -14,3 +14,7 @@ if(keyboard_check(ord("Z"))) {
 		});
 	}
 }
+
+if(keyboard_check(ord("'C"))){
+	render_dialogue(global.dialogue,1,2)
+}

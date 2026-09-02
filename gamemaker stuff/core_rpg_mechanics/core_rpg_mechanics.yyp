@@ -17,7 +17,7 @@
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"dialogue.json","CopyToMask":-1,"filePath":"datafiles","name":"dialogue.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"dialogue.txt","CopyToMask":-1,"filePath":"datafiles","name":"dialogue.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"dialogue2.txt","CopyToMask":-1,"filePath":"datafiles","name":"dialogue2.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

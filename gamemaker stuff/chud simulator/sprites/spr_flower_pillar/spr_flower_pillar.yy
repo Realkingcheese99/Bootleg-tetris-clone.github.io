@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"flower",
-    "path":"folders/spr/flower.yy",
+    "name":"shelves",
+    "path":"folders/spr/shelves.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

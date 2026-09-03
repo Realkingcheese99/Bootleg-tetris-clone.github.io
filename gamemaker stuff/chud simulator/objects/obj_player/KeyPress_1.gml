@@ -23,4 +23,6 @@
 				}
 			//}
 		}
+	} else if(keyboard_check(ord("C"))) {
+		array_push(global.flowers_back,[1,100,100])
 	}

@@ -12,3 +12,5 @@ var jsonDialogue = buffer_read(buffer, buffer_string);
 buffer_delete(buffer);
 global.dialogue = json_parse(jsonDialogue);
 }
+
+global.flowers_back = []
